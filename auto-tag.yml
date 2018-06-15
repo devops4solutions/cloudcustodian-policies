@@ -1,0 +1,9 @@
+policies:
+  - name: tagging-owner
+    resource: ec2
+    filters:
+      - "tag:owner": absent
+    actions:
+      - type: tag
+        key: owner
+        value: "Tagging example"
